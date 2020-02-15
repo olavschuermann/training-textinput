@@ -6,6 +6,10 @@ function App() {
   // Eingabe in Input-Feld auslesen + in Funktion schreiben
   const [inputData, setInputData] = useState("");
 
+  const showData = () => {
+    alert(inputData);
+  }
+
 
   return (
     <div className="App">
@@ -15,7 +19,7 @@ function App() {
       <br /> <br />
       Maximale Länge:
       <br /><br />
-      <button>Absenden</button>
+      <button onClick={showData}>Absenden</button>
     </div>
   );
 }
