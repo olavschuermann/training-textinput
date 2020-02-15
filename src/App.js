@@ -10,7 +10,8 @@ function App() {
   return (
     <div className="App">
       <label>Ihre Eingabe:</label> <br />
-      <input type="text" onChange={}></input>
+      <input type="text" onChange={e => setInputData(e.target.value)}></input>
+      {console.log(inputData)}
       <br /> <br />
       Maximale Länge:
       <br /><br />
