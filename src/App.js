@@ -10,6 +10,10 @@ function App() {
     alert(inputData);
   }
 
+  // Maximale Länge prüfen
+  const maxLength = 25;
+  
+
 
   return (
     <div className="App">
