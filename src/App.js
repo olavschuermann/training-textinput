@@ -13,8 +13,6 @@ function App() {
   // Maximale Länge prüfen
   const maxLength = 25;
   
-
-
   return (
     <div className="App">
       <label>Ihre Eingabe:</label> <br />
