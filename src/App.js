@@ -17,7 +17,7 @@ function App() {
 
   console.log('Länge der Eingabe: ' + inputData.length);
 
-  if (inputData.length > 5) {
+  if (inputData.length > 5 || inputData.length === 0) {
     inputInvalid = true;
   }
   
