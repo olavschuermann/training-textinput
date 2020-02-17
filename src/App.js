@@ -12,6 +12,8 @@ function App() {
 
   // Maximale Länge prüfen
   const maxLength = 25;
+
+  console.log('Länge der Eingabe: ' + inputData.length);
   
   return (
     <div className="App">
