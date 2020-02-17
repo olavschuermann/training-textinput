@@ -13,7 +13,13 @@ function App() {
   // Maximale Länge prüfen
   const maxLength = 25;
 
+  const inputInvalid = false;
+
   console.log('Länge der Eingabe: ' + inputData.length);
+
+  if (inputData.length > 5) {
+    inputInvalid = true;
+  }
   
   return (
     <div className="App">
@@ -23,7 +29,7 @@ function App() {
       <br /> <br />
       Maximale Länge:
       <br /><br />
-      <button onClick={showData}>Absenden</button>
+      <button disabled={inputInvalid} onClick={showData}>Absenden</button>
     </div>
   );
 }
