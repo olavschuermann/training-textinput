@@ -13,7 +13,7 @@ function App() {
   // Maximale Länge prüfen
   const maxLength = 25;
 
-  const inputInvalid = false;
+  let inputInvalid = false;
 
   console.log('Länge der Eingabe: ' + inputData.length);
 
