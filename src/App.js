@@ -14,11 +14,13 @@ function App() {
   const maxLength = 25;
 
   let inputInvalid = false;
+  let errorMessage = "";
 
   console.log('Länge der Eingabe: ' + inputData.length);
 
   if (inputData.length > 5 || inputData.length === 0) {
     inputInvalid = true;
+    errorMessage = 'Eingabe zu lang oder zu kurz!';
   }
   
   return (
@@ -30,6 +32,8 @@ function App() {
       Maximale Länge:
       <br /><br />
       <button disabled={inputInvalid} onClick={showData}>Absenden</button>
+      <br /> <br />
+      <label>{errorMessage}</label>
     </div>
   );
 }
