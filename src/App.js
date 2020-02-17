@@ -10,9 +10,6 @@ function App() {
     alert(inputData);
   }
 
-  // Maximale Länge prüfen
-  const maxLength = 25;
-
   let inputInvalid = false;
   let errorMessage = "";
 
