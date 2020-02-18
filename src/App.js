@@ -12,10 +12,13 @@ function App() {
 
   let inputInvalid = false;
   let errorMessage = "";
+  let charsToGo = 10;
 
   console.log('Länge der Eingabe: ' + inputData.length);
 
-  if (inputData.length > 5 || inputData.length === 0) {
+  charsToGo = 10 - inputData.length;
+
+  if (inputData.length > 10 || inputData.length === 0) {
     inputInvalid = true;
     errorMessage = 'Eingabe zu lang oder zu kurz!';
   }
@@ -31,6 +34,8 @@ function App() {
       <button disabled={inputInvalid} onClick={showData}>Absenden</button>
       <br /> <br />
       <label>{errorMessage}</label>
+      <br /><br />
+      <label>Noch verfügbare Zeichen: {charsToGo}</label>
     </div>
   );
 }
