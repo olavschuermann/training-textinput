@@ -16,11 +16,17 @@ function App() {
 
   console.log('Länge der Eingabe: ' + inputData.length);
 
-  charsToGo = 10 - inputData.length;
-
-  if (inputData.length > 10 || inputData.length === 0) {
+  if (inputData.length < 11) {
+    charsToGo = 10 - inputData.length;
+  } else {
     inputInvalid = true;
-    errorMessage = 'Eingabe zu lang oder zu kurz!';
+    charsToGo = 0;
+    errorMessage = "Eingabe ist zu lang!"
+  }
+
+  if (inputData.length === 0) {
+    inputInvalid = true;
+    errorMessage = 'Eingabe zu kurz!';
   }
   
   return (
