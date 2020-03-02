@@ -17,6 +17,11 @@ function App() {
 const [textInput, setTextInput] = useState("");
 
 console.log(textInput);
+
+const triggerAlert = (e) => {
+    e.preventDefault();
+    window.alert('Ihre Eingabe ist: ' + textInput);
+}
    
 return (
     <div className="App">
@@ -25,7 +30,7 @@ return (
             <br /><br />
             <input type="text" onChange={e => setTextInput(e.target.value)}></input>
             <br /><br />
-            <button>Absenden</button>
+            <button onClick={triggerAlert}>Absenden</button>
         </form>
     </div>
   );
