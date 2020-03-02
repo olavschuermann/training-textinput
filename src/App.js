@@ -12,7 +12,11 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-        
+        <form>
+            <label>Bitte geben Sie einen Text ein:</label>
+            <br /><br />
+            <input type="text"></input>
+        </form>
     </div>
   );
 }
