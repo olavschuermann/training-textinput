@@ -24,9 +24,10 @@ let errorMessage = "";
 
 if (textInput.length === 0) {
     disableButton = true;
-
+    errorMessage = "Der Text ist zu kurz, Mindestlänge 1";
 } else if (textInput.length > 10) {
     disableButton = true;
+    errorMessage = "Der Text ist zu lang, maximale Länge: 10";
 }
 
 const triggerAlert = (e) => {
@@ -42,6 +43,8 @@ return (
             <input type="text" onChange={e => setTextInput(e.target.value)}></input>
             <br /><br />
             <button disabled={disableButton} onClick={triggerAlert}>Absenden</button>
+            <br /><br />
+            {errorMessage}
         </form>
     </div>
   );
