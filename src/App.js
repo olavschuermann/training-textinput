@@ -20,7 +20,7 @@ console.log(textInput);
 
 let disableButton = false;
 
-if (textInput.length === 0) {
+if (textInput.length === 0 || textInput.length > 10) {
     disableButton = true;
 }
 
