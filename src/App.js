@@ -16,6 +16,8 @@ function App() {
             <label>Bitte geben Sie einen Text ein:</label>
             <br /><br />
             <input type="text"></input>
+            <br /><br />
+            <button>Absenden</button>
         </form>
     </div>
   );
