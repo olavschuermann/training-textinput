@@ -10,6 +10,7 @@ import './App.css';
 // Maximallänge des Textes wird überprüft (2)
 // Bei Verstößen gegen Minimal- oder Maximallänge wird Absenden-Button deaktiviert
 // Ausgabe einer passenden Fehlermeldung wenn zu kurz oder zu lang
+// Anzeige der noch zur Verfügung stehenden Zeichen (10 - x)
 
 
 function App() {
@@ -21,6 +22,7 @@ console.log(textInput);
 
 let disableButton = false;
 let errorMessage = "";
+let maxChar = 10;
 
 if (textInput.length === 0) {
     disableButton = true;
@@ -29,6 +31,8 @@ if (textInput.length === 0) {
     disableButton = true;
     errorMessage = "Der Text ist zu lang, maximale Länge: 10";
 }
+
+maxChar = maxChar - textInput.length;
 
 const triggerAlert = (e) => {
     e.preventDefault();
@@ -45,6 +49,8 @@ return (
             <button disabled={disableButton} onClick={triggerAlert}>Absenden</button>
             <br /><br />
             {errorMessage}
+            <br /><br />
+            <label>Sie haben noch {maxChar} Zeichen zur Verfügung</label>
         </form>
     </div>
   );
