@@ -18,6 +18,12 @@ const [textInput, setTextInput] = useState("");
 
 console.log(textInput);
 
+let disableButton = false;
+
+if (textInput.length === 0) {
+    disableButton = true;
+}
+
 const triggerAlert = (e) => {
     e.preventDefault();
     window.alert('Ihre Eingabe ist: ' + textInput);
@@ -30,7 +36,7 @@ return (
             <br /><br />
             <input type="text" onChange={e => setTextInput(e.target.value)}></input>
             <br /><br />
-            <button onClick={triggerAlert}>Absenden</button>
+            <button disabled={disableButton} onClick={triggerAlert}>Absenden</button>
         </form>
     </div>
   );
