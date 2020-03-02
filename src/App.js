@@ -8,7 +8,8 @@ import './App.css';
 // Text wird per Alert ausgegeben
 // Mindestlänge des Textes wird überprüft (1)
 // Maximallänge des Textes wird überprüft (2)
-// Bei Verstößen gegen Minimal- oder Maximallänge wird Absenden-Button deaktivier
+// Bei Verstößen gegen Minimal- oder Maximallänge wird Absenden-Button deaktiviert
+// Ausgabe einer passenden Fehlermeldung wenn zu kurz oder zu lang
 
 
 function App() {
@@ -19,8 +20,12 @@ const [textInput, setTextInput] = useState("");
 console.log(textInput);
 
 let disableButton = false;
+let errorMessage = "";
 
-if (textInput.length === 0 || textInput.length > 10) {
+if (textInput.length === 0) {
+    disableButton = true;
+
+} else if (textInput.length > 10) {
     disableButton = true;
 }
 
