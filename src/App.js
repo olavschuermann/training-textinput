@@ -33,6 +33,9 @@ if (textInput.length === 0) {
 }
 
 maxChar = maxChar - textInput.length;
+if (maxChar < 1) {
+    maxChar = 0;
+}
 
 const triggerAlert = (e) => {
     e.preventDefault();
