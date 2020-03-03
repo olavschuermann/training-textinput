@@ -58,7 +58,7 @@ return (
             <label>Sie haben noch {maxChar} Zeichen zur Verfügung</label>
         </form>
         <br /><br />
-        <Liste />
+        <Liste textInput={textInput}/>
     </div>
   );
 }

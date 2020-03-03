@@ -1,9 +1,10 @@
 import React from 'react'
 
-function Liste() {
+function Liste(props) {
     return (
         <div>
             LISTE!
+            {props.textInput}
         </div>
     )
 }
