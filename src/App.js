@@ -11,6 +11,7 @@ import './App.css';
 // Bei Verstößen gegen Minimal- oder Maximallänge wird Absenden-Button deaktiviert
 // Ausgabe einer passenden Fehlermeldung wenn zu kurz oder zu lang
 // Anzeige der noch zur Verfügung stehenden Zeichen (10 - x)
+// Eingabe in Liste schreiben > Child component
 
 
 function App() {
