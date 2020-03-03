@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
 
+import Liste from './Liste';
+
 // Goal of app:
 // Texteingabe-Feld + Button für Absenden
 // Hooks verwenden
@@ -12,7 +14,6 @@ import './App.css';
 // Ausgabe einer passenden Fehlermeldung wenn zu kurz oder zu lang
 // Anzeige der noch zur Verfügung stehenden Zeichen (10 - x)
 // Eingabe in Liste schreiben > Child component
-
 
 function App() {
 
@@ -56,6 +57,8 @@ return (
             <br /><br />
             <label>Sie haben noch {maxChar} Zeichen zur Verfügung</label>
         </form>
+        <br /><br />
+        <Liste />
     </div>
   );
 }
