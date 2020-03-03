@@ -14,6 +14,8 @@ import Liste from './Liste';
 // Ausgabe einer passenden Fehlermeldung wenn zu kurz oder zu lang
 // Anzeige der noch zur Verfügung stehenden Zeichen (10 - x)
 // Eingabe in Liste schreiben > Child component
+// Text in Liste ausgeben
+// Nach Absenden in Array schreiben?
 
 function App() {
 
