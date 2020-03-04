@@ -14,7 +14,7 @@ let ausgabeListe = '';
             <br /><br />
             {ausgabeListe = props.arrayListe.map(item => {
                 <div>{item}</div>
-            }
+            })}
             {ausgabeListe}
         </div>
     )
