@@ -1,11 +1,14 @@
 import React from 'react'
 
 function Liste(props) {
+
+const arrayListe = props.textInput;
+
     return (
         <div>
-            LISTE!
+            LISTE:
             <br /><br />
-            {props.textInput}
+            {arrayListe}
         </div>
     )
 }
