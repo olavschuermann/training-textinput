@@ -46,8 +46,8 @@ if (maxChar < 1) {
 const triggerAlert = (e) => {
     e.preventDefault();
     // window.alert('Ihre Eingabe ist: ' + textInput);
-    arrayListe = arrayListe.push(textInput);
-    console.log(arrayListe);
+    arrayListe.push(textInput);
+    // console.log(arrayListe);
 }
    
 return (
