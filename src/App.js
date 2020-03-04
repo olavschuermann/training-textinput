@@ -28,7 +28,7 @@ let disableButton = false;
 let errorMessage = "";
 let maxChar = 10;
 
-const arrayListe = [];
+let arrayListe = [];
 
 if (textInput.length === 0) {
     disableButton = true;
@@ -46,7 +46,8 @@ if (maxChar < 1) {
 const triggerAlert = (e) => {
     e.preventDefault();
     // window.alert('Ihre Eingabe ist: ' + textInput);
-    arrayListe.push(textInput);
+    arrayListe = arrayListe.push(textInput);
+    console.log(arrayListe);
 }
    
 return (
