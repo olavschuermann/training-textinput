@@ -15,7 +15,7 @@ import Liste from './Liste';
 // Anzeige der noch zur Verfügung stehenden Zeichen (10 - x)
 // Eingabe in Liste schreiben > Child component
 // Text in Liste ausgeben
-// Nach Absenden in Array schreiben?
+// Nach Absenden in Array schreiben, damit die Liste wächst...
 
 function App() {
 
@@ -27,6 +27,8 @@ console.log(textInput);
 let disableButton = false;
 let errorMessage = "";
 let maxChar = 10;
+
+const arrayListe = [];
 
 if (textInput.length === 0) {
     disableButton = true;
@@ -43,7 +45,8 @@ if (maxChar < 1) {
 
 const triggerAlert = (e) => {
     e.preventDefault();
-    window.alert('Ihre Eingabe ist: ' + textInput);
+    // window.alert('Ihre Eingabe ist: ' + textInput);
+    arrayListe.push(textInput);
 }
    
 return (
@@ -60,7 +63,7 @@ return (
             <label>Sie haben noch {maxChar} Zeichen zur Verfügung</label>
         </form>
         <br /><br />
-        <Liste textInput={textInput}/>
+        <Liste arrayListe={arrayListe}/>
     </div>
   );
 }
