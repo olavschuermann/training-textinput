@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Array.map einfügen für Durchlauf aller Elemente
-// var new_array = arr.map(function callback(currentValue[, index[, array]]) {
+// Syntax Array.Map - var new_array = arr.map(function callback(currentValue[, index[, array]]) {
     // Zurückgegebenes Element für new_array}
 
 function Liste(props) {
