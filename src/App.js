@@ -28,7 +28,7 @@ let disableButton = false;
 let errorMessage = "";
 let maxChar = 10;
 
-let arrayListe = [];
+let arrayListe = [''];
 
 if (textInput.length === 0) {
     disableButton = true;
