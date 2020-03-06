@@ -47,7 +47,8 @@ const triggerAlert = (e) => {
     e.preventDefault();
     // window.alert('Ihre Eingabe ist: ' + textInput);
     arrayListe.push(textInput);
-    // console.log(arrayListe);
+    console.log(arrayListe);
+    setTextInput = '';
 }
    
 return (
