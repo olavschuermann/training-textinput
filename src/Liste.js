@@ -12,7 +12,7 @@ let ausgabeListe = '';
         <div>
             LISTE:
             <br /><br />
-            {ausgabeListe = props.arrayListe.map(item => {
+            {props.arrayListe.map(item => {
                 <div>{item}</div>
             })}
             {ausgabeListe}
