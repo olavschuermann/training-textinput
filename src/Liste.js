@@ -6,16 +6,14 @@ import React from 'react'
 
 function Liste(props) {
 
-let ausgabeListe = '';
-
     return (
         <div>
             LISTE:
             <br /><br />
-            {props.arrayListe.map(item => {
-                <div>{item}</div>
-            })}
-            {ausgabeListe}
+            {props.arrayListe.map((item) => {
+                return <div>{item}</div>
+            })
+            }
         </div>
     )
 }
