@@ -47,7 +47,7 @@ const triggerAlert = (e) => {
     e.preventDefault();
     // window.alert('Ihre Eingabe ist: ' + textInput);
     // Array wächst nicht trotz push - überschreibt immer den ersten Wert?!
-    // ??
+    // ????
     arrayListe.push(textInput);
     console.log(arrayListe);
     setTextInput('');
