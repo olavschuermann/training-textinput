@@ -47,9 +47,10 @@ if (maxChar < 1) {
 const triggerAlert = (e) => {
     e.preventDefault();
     // window.alert('Ihre Eingabe ist: ' + textInput);
-    // Array wächst nicht trotz push - überschreibt immer den ersten Wert?!
-    // ??????
+    // Array wächst - erster Wert erscheint erst nach dem zweiten Absenden
     console.log('textInput: ' + textInput);
+
+    // React form of pushing data into array - why is push not working?
     setContentListe(contentListe => [...contentListe, textInput]);
     console.log(contentListe);
     // setTextInput('');
@@ -69,7 +70,7 @@ return (
             <label>Sie haben noch {maxChar} Zeichen zur Verfügung</label>
         </form>
         <br /><br />
-        <Liste arrayListe={contentListe}/>
+        <Liste contentListe={contentListe}/>
     </div>
   );
 }

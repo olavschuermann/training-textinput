@@ -10,7 +10,7 @@ function Liste(props) {
         <div>
             LISTE:
             <br /><br />
-            {props.arrayListe.map((item) => {
+            {props.contentListe.map((item) => {
                 return <div>{item}</div>
             })
             }
