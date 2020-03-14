@@ -31,8 +31,6 @@ let disableButton = false;
 let errorMessage = "";
 let maxChar = 10;
 
-let arrayListe = [];
-
 if (textInput.length === 0) {
     disableButton = true;
     errorMessage = "Der Text ist zu kurz, Mindestlänge 1";
@@ -51,9 +49,8 @@ const triggerAlert = (e) => {
     // window.alert('Ihre Eingabe ist: ' + textInput);
     // Array wächst nicht trotz push - überschreibt immer den ersten Wert?!
     // ??????
-    arrayListe = contentListe;
-    setContentListe(arrayListe => [...arrayListe, textInput]);
-    console.log(arrayListe);
+    setContentListe(contentListe => [...contentListe, textInput]);
+    console.log(contentListe);
     // setTextInput('');
 }
    
