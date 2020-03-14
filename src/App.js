@@ -29,6 +29,7 @@ let errorMessage = "";
 let maxChar = 10;
 
 let arrayListe = [];
+let tempListe = [];
 
 if (textInput.length === 0) {
     disableButton = true;
@@ -49,8 +50,9 @@ const triggerAlert = (e) => {
     // Array wächst nicht trotz push - überschreibt immer den ersten Wert?!
     // ??????
     arrayListe.push(textInput);
-    console.log(arrayListe);
-    setTextInput('');
+    tempListe = [...arrayListe];
+    console.log(tempListe);
+    // setTextInput('');
 }
    
 return (
