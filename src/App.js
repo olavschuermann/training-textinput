@@ -22,6 +22,9 @@ function App() {
 // Eingabe aus Textfeld    
 const [textInput, setTextInput] = useState("");
 
+// Adding hook for data array (Liste)
+const [contentListe, setContentListe] = useState([]);
+
 console.log(textInput);
 
 let disableButton = false;
@@ -29,7 +32,6 @@ let errorMessage = "";
 let maxChar = 10;
 
 let arrayListe = [];
-let tempListe = [];
 
 if (textInput.length === 0) {
     disableButton = true;
@@ -49,9 +51,9 @@ const triggerAlert = (e) => {
     // window.alert('Ihre Eingabe ist: ' + textInput);
     // Array wächst nicht trotz push - überschreibt immer den ersten Wert?!
     // ??????
-    arrayListe.push(textInput);
-    tempListe = [...arrayListe];
-    console.log(tempListe);
+    arrayListe = contentListe;
+    setContentListe(arrayListe => [...arrayListe, textInput]);
+    console.log(arrayListe);
     // setTextInput('');
 }
    
