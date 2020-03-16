@@ -19,6 +19,7 @@ import Liste from './Liste';
 
 function App() {
 
+// All things changing = use a hook!
 // Eingabe aus Textfeld    
 const [textInput, setTextInput] = useState("");
 
