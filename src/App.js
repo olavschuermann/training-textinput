@@ -54,7 +54,7 @@ const triggerAlert = (e) => {
     // React form of pushing data into array - why is push not working?
     setContentListe(contentListe => [...contentListe, textInput]);
     console.log(contentListe);
-    // setTextInput('');
+    setTextInput('');
 }
    
 return (
